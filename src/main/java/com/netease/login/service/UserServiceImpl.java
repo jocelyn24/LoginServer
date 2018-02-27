@@ -20,12 +20,13 @@ public class UserServiceImpl implements IUserService {
     }
 
     public boolean login(User user) {
-        String sql = "SELECT account_id FROM user WHERE account_id=? AND password=?";
-        return mJdbcTemplate.queryForObject(sql, String.class, new String[]{user.getAccountId(), user.getPassword()}) != null;
+        String sql = "SELECT count(*) FROM user WHERE account_id=? AND password=?";
+        return mJdbcTemplate.queryForObject(sql, Integer.class, new String[]{user.getAccountId(), user.getPassword()}) > 0;
     }
 
     @Override
     public void resetPassword(User user, String newPassword) {
-        mJdbcTemplate.update("UPDATE user");
+        // TODO: 2018/2/27 操作数据库，更新密码
+        mJdbcTemplate.update("");
     }
 }
