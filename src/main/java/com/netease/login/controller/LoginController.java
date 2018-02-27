@@ -1,6 +1,6 @@
 package com.netease.login.controller;
 
-import com.netease.login.entity.User;
+import com.netease.login.entity.request.User;
 import com.netease.login.entity.base.BaseResponse;
 import com.netease.login.entity.response.LoginResult;
 import com.netease.login.service.UserServiceImpl;
