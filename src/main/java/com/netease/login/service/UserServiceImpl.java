@@ -1,6 +1,6 @@
 package com.netease.login.service;
 
-import com.netease.login.entity.User;
+import com.netease.login.entity.request.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
