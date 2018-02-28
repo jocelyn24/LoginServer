@@ -57,6 +57,15 @@ public class LoginController {
         return response;
     }
 
+//    @PostMapping(value = "/login")
+//    public void realLogin(@ModelAttribute User user) {
+//        if (mUserService.login(user)) {
+//            LOG.info("login success!");
+//        } else {
+//            LOG.info("login failed!");
+//        }
+//    }
+
     @GetMapping(value = "/login_success")
     public String loginSuccess() {
         return "login_success";

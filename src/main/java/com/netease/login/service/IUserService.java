@@ -10,7 +10,7 @@ public interface IUserService {
      * 注册
      * @param user
      */
-    void register(User user);
+    boolean register(User user);
 
     /**
      *
@@ -21,7 +21,6 @@ public interface IUserService {
     /**
      * 重置密码
      * @param user
-     * @param newPassword
      */
-    void resetPassword(User user, String newPassword);
+    String resetPassword(User user);
 }
